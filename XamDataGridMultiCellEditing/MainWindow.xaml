@@ -1,0 +1,17 @@
+﻿<Window x:Class="XamDataGridMultiCellEditing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" xmlns:igDP="http://infragistics.com/DataPresenter">
+    <Grid>
+        <igDP:XamDataGrid x:Name="_xamDataGrid" PreviewKeyDown="XamDataGrid_PreviewKeyDown" 
+                          EditModeStarting="XamDataGrid_EditModeStarting" 
+                          EditModeEnding="XamDataGrid_EditModeEnding">
+            <igDP:XamDataGrid.FieldLayoutSettings>
+                <igDP:FieldLayoutSettings SelectionTypeCell="Extended" />
+            </igDP:XamDataGrid.FieldLayoutSettings>
+            <igDP:XamDataGrid.FieldSettings>
+                <igDP:FieldSettings CellClickAction="SelectCell" />
+            </igDP:XamDataGrid.FieldSettings>
+        </igDP:XamDataGrid>
+    </Grid>
+</Window>
